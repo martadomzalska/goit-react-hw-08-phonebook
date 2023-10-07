@@ -1,21 +1,34 @@
 import { Routes, Route } from 'react-router-dom';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
+import { useDispatch } from 'react-redux';
+import { useAuth } from 'hooks/useAuth';
+import { useEffect } from 'react';
+import { refreshUser } from 'redux/auth/operations';
 import Home from 'pages/Home';
 import Login from 'pages/Login';
-// import SignUp from 'pages/Register';
 import Register from 'pages/Register';
-import Contacts from 'pages/Contacts/Contacts';
+import Contacts from 'pages/Contacts';
 import SharedLayout from './SharedLayout/SharedLayout';
 
 export const App = () => {
-  return (
+   const dispatch = useDispatch();
+   const { isRefreshing } = useAuth();
+
+   useEffect(() => {
+     dispatch(refreshUser());
+   }, [dispatch]);
+  return isRefreshing ? (<p>Refreshing user...</p>):(
     <div>
-    
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute redirectTo="/phonebook" component={<Login />} />
+            }
+          />
           <Route
             path="/signup"
             element={
