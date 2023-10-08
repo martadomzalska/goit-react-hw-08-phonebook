@@ -1,5 +1,4 @@
-.nav {
-  
+/* .nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,4 +9,10 @@
   justify-content: space-between;
   width: 90%;
   margin: 10px;
+} */
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -37,19 +37,26 @@ const RegisterForm = () => {
       <form className={css.form} onSubmit={handleSubmit}>
         <div className={css.label}>
           <label htmlFor="name">Name</label>
-          <input type="name" name="name" required />
+          <input className={css.input} type="name" name="name" required />
         </div>
         <div className={css.label}>
           <label htmlFor="email">E-mail:</label>
-          <input type="email" name="email" required />
+          <input className={css.input}  type="email" name="email" required />
         </div>
         <div className={css.label}>
           <label htmlFor="password">Password:</label>
-          <input type="password" name="password" required />
+          <input
+            className={css.input}
+            type="password"
+            name="password"
+            required
+          />
         </div>
 
         <div>
-          <button type="submit">Sign up</button>
+          <button className={css.submitBtn} type="submit">
+            Sign up
+          </button>
         </div>
       </form>
       {registrationStatus === 'loading' && <p>Loading...</p>}

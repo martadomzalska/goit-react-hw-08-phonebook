@@ -7,17 +7,14 @@
 
 .container {
   position: relative;
-  border: 1px solid whitesmoke;
+  border: 1px solid #161b33;
   border-radius: 4px;
-  /* display: flex; */
-  flex-direction: column;
   width: 300px;
   height: 400px;
-  justify-content: center;
-  align-items: center;
 }
 
 .form {
+  margin-top:50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +23,17 @@
 .label{
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    
+    gap: 5px; 
+}
+.input {
+   background-color: rgb(166, 156, 172, 0.5);
+}
+.submitBtn {
+    width: 70px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(166, 156, 172, 0.5);
+  font-size: 15px;
+  padding: 5px;
+  margin-top: 20px;
 }

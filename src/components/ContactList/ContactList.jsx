@@ -21,7 +21,7 @@ export const ContactList = () => {
           ))}
         </ul>
       ) : (
-        <p>No contacts found</p>
+        <p>No contacts found :(</p>
       )}
     </>
   );

@@ -1,9 +1,3 @@
-// function Contacts() {
-//     return ( <p>Contacts</p> );
-// }
-
-// export default Contacts;
-
 import { useSelector } from 'react-redux';
 import { Filter } from 'components/Filter/Filter';
 import { useEffect } from 'react';
