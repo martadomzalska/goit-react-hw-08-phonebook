@@ -13,7 +13,3 @@ function Login() {
 }
 
 export default Login;
-
-//wyekportować login
-
-//stworzyć form z loginem i hasłem

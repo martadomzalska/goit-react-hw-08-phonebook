@@ -22,8 +22,6 @@ const RegisterForm = () => {
      startTransition(() => {
        dispatch(register(newUser));
      });
-    
-  
   
     form.reset();
   };

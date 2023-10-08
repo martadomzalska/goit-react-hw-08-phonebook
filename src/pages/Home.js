@@ -8,6 +8,7 @@ function Home() {
       </Helmet>
       <div className="home">
         <h1>Welcome to your phonebook!</h1>
+        <p>Log in to see your contacts or add new ones :)</p>
       </div>
     </>
   );
