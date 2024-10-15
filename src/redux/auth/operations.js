@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+axios.defaults.baseURL = 'https://connections-api.goit.global/';
 
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -24,7 +24,7 @@ export const register = createAsyncThunk(
       // if (responseData.keyValue.email) {
       //   alert(`${responseData.keyValue.email} is already registered`);
       // }
-    
+
       alert('Registration failed. Try again.');
 
       return thunkAPI.rejectWithValue(error.message);
